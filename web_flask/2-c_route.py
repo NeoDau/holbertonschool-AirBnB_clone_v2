@@ -8,15 +8,19 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def index():
+    """ first end point """
     return("Hello HBNB!")
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
+    """ second end point """
     return("HBNB")
+
 
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
+    """ capture var """
     text = text.replace("_" " ")
     return(f"C {text}")
 

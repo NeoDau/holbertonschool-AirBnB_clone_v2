@@ -1,3 +1,4 @@
+#usr/bin/python3
 """ shebang. """
 from flask import Flask, render_template
 
@@ -46,7 +47,6 @@ def number_template(n):
 
 @app.route("/number_odd_or_even/<int:n>")
 def number_odd_even(n):
-    """is odd or even"""
     if (n % 2 == 0):
         number = "Number: {} is even".format(n)
     else:

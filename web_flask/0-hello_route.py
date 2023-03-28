@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""shebang"""
 from flask import Flask
 
 

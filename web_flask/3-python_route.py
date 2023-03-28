@@ -26,10 +26,10 @@ def c(text):
 
 
 @app.route("/python", defaults={"text": "is_cool"}, strict_slashes=False)
-@app.route("/python/<text>", strict_slashes=False)
+@app.route("/python/<text>")
 def python(text):
-    text = textreplace("_", " ")
-    return("C {}".format(text))
+    text = text.replace("_", " ")
+    return("Python {}".format(text))
 
 
 if __name__ == "__main__":

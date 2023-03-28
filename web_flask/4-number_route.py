@@ -33,7 +33,7 @@ def python(text):
     return("Python {}".format(text))
 
 
-@app.toute("/number/<int:n>", strict_slashes=False)
+@app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     """ number integer """
     return("{} is a number".format(n))

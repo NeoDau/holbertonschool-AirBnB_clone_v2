@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""shebang"""
+"""shebang."""
 from flask import Flask
 
 
@@ -22,7 +22,7 @@ def hbnb():
 def c(text):
     """ capture var """
     text = text.replace("_" " ")
-    return(f"C {text}")
+    return("C {}".format(text))
 
 
 if __name__ == "__main__":

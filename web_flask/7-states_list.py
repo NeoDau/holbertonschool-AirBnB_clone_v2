@@ -8,14 +8,15 @@ from models import State
 app = Flask(__name__)
 
 
-
 @app.teardown_appcontext
 def close(x):
+    """call storage"""
     storage.close()
 
 
 @app.route("/state_list", strict_slashes=False)
 def state_list():
+    """list in html"""
     return render_template("7-state_list.html", stt=storage.all("State").values())
     
 

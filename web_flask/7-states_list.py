@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ shebang"""
-from flask import Flask, render_template 
+from . import Flask, render_template 
 from models import storage
 from models import State
 
@@ -20,5 +20,5 @@ def state_list():
     return render_template("7-states_list.html", stt=storage.all("State").values())
     
 
-if name == "__main__":
+if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 5000)
